@@ -46,7 +46,7 @@ class SourceConfig(BaseModel):
     type: SourceType
 
     # For csv/json: file path or raw content
-    path: str | None = "/code/data/input_data.csv"
+    path: str | None = "/code/input_data.csv"
     # raw_content: str | None = "user_id,name,salary\n1,John Doe,5000\n2,Jane Smith,3000\n3,Bob Johnson,4000"
 
     # For db: connection string + query
@@ -61,7 +61,7 @@ class OutputConfig(BaseModel):
     """Configuration for report outputs."""
     type: OutputType
     # For csv/json file outputs
-    path: str | None = "/code/data/high_salary_employees.json"
+    path: str | None = "/code/high_salary_employees.json"
 
 
 class ReportRequest(BaseModel):
