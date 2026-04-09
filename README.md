@@ -132,12 +132,12 @@ docker compose down
     {
       "source": {
         "type": "csv",
-        "path": "file:///code/input_data.csv"
+        "path": "/code/input_data.csv"
       },
       "filter": "high_salary_employees",
       "output": {
         "type": "json",
-        "path": "file:///code/output_example.json"
+        "path": "/code/output_example.json"
       }
     }
   ]
