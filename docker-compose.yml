@@ -1,0 +1,14 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: reports_backend
+    volumes:
+      - ./app:/code/app
+#      - /home/user/Documents/:/code/data/  # Change path to your local directory for storing and loading data
+    ports:
+      - "8000:8000"
+    command: [ "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload" ]
+    restart: unless-stopped
+

@@ -1,0 +1,101 @@
+ID,Name,Age,Job,Salary
+1,Ivan,38,Engineer,-3500
+2,Olena,30,Biologist,4000
+3,Maksym,25,Administrator,1500
+4,Yuliia,28,Designer,2800
+5,Oleksandr,45,Manager,5500
+6,Dmytro,32,Developer,4800
+7,Oksana,29,Analyst,3200
+8,Serhii,50,Consultant,6000
+9,Sofiia,35,Nurse,2500
+10,Andrii,41,Architect,5200
+11,Iryna,27,Teacher,2200
+12,Volodymyr,39,Accountant,3800
+13,Maria,31,Marketing,3100
+14,Taras,44,Lawyer,7500
+15,Kateryna,26,HR,2400
+16,Ihor,33,Data Scientist,5000
+17,Nataliia,24,Assistant,1800
+18,Mykola,48,Director,8500
+19,Svitlana,36,Writer,2700
+20,Oleh,29,Salesperson,2600
+21,Tetiana,42,Pharmacist,4600
+22,Roman,34,Electrician,3000
+23,Olha,37,Editor,3200
+24,Petro,52,Pilot,9000
+25,Halyna,25,Chef,2300
+26,Vasyl,30,Mechanic,2800
+27,Liudmyla,46,Professor,6200
+28,Pavlo,28,Technician,2500
+29,Nadiia,31,Graphic Designer,2900
+30,Viktor,40,Project Manager,5800
+31,Vira,27,Translator,2400
+32,Yurii,35,Software Engineer,5400
+33,Liubov,32,Dentist,7200
+34,Anatolii,43,Broker,6400
+35,Daria,29,Recruiter,2800
+36,Vitalii,38,Journalist,3300
+37,Anastasiia,26,Photographer,2100
+38,Yevhen,47,Surgeon,9500
+39,Viktoriia,33,Librarian,2000
+40,Anton,55,CEO,12000
+41,Alina,30,Event Planner,2700
+42,Denys,28,Web Developer,4100
+43,Yana,34,Auditor,4300
+44,Vladyslav,39,Police Officer,3500
+45,Inna,25,Barista,1600
+46,Artem,41,Plumber,2900
+47,Larysa,49,Judge,8800
+48,Bohdan,31,Paramedic,3200
+49,Valentyna,27,Social Worker,2500
+50,Kostiantyn,36,Musician,2200
+51,Nina,32,Fitness Trainer,2400
+52,Ruslan,45,Chef,4000
+53,Tamara,29,UX Designer,4500
+54,Stanislav,37,Financial Analyst,5300
+55,Zoya,26,Customer Service,1900
+56,Valentyn,51,Real Estate Agent,5100
+57,Polina,34,Biomedical Engineer,4700
+58,Hryhorii,28,Videographer,3100
+59,Khrystyna,40,Therapist,4200
+60,Stepan,44,Civil Engineer,5600
+61,Maryna,31,Research Assistant,2300
+62,Borys,33,SEO Specialist,3400
+63,Lidiia,29,Interior Designer,3600
+64,Leonid,48,Logistics Manager,4900
+65,Diana,25,Tutor,1700
+66,Valerii,35,Construction Manager,4800
+67,Marta,38,Meteorologist,4100
+68,Yosyp,27,Baker,2100
+69,Solomiia,30,PR Specialist,3500
+70,Illia,42,Economist,6100
+71,Veronika,32,Florist,1800
+72,Tymofii,53,Veterinarian,5800
+73,Roksolana,28,Flight Attendant,2900
+74,Kyrylo,36,IT Support,3100
+75,Angelina,41,Optometrist,6500
+76,Nazarii,26,Data Entry,1700
+77,Yevheniia,34,Art Director,4800
+78,Ostap,47,Insurance Agent,4000
+79,Olesia,39,Geologist,4400
+80,Myron,30,Copywriter,2800
+81,Bozhena,27,Makeup Artist,2300
+82,Lev,45,Hardware Engineer,5900
+83,Daryna,33,Urban Planner,4200
+84,Matvii,50,Principal,6300
+85,Zhanna,29,Animator,3700
+86,Zakhar,31,Electrician,3300
+87,Kseniia,35,Translator,2600
+88,Hlib,43,Database Admin,5400
+89,Milana,26,Receptionist,1800
+90,Arsen,38,Sales Manager,5000
+91,Ruslana,32,Dietitian,3600
+92,Orest,28,Content Creator,3000
+93,Snizhana,40,Compliance Officer,4700
+94,Liubomyr,34,Supply Chain Analyst,4200
+95,Ulyana,27,Retail Worker,1600
+96,Vsevolod,46,Software Architect,8000
+97,Yaryna,31,Banker,4500
+98,Lilia,29,Illustrator,2900
+99,Boryslav,54,Operations Manager,7000
+100,Melaniia,36,Scientist,5200
