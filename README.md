@@ -26,10 +26,10 @@ HTTP Request (BatchRequest)
   run_batch()  ──── asyncio.gather() ────► [run_report(), run_report(), ...]
                                                     │
                                           ┌─────────▼──────────┐
-                                          │  Source (fetch)     │  ← CSV / JSON / DB / API
-                                          │  Validate (Pydantic)│
-                                          │  Filter (apply)     │  ← тип звіту
-                                          │  Output (write)     │  ← JSON / CSV / stream
+                                          │ Source (fetch)     │  ← CSV / JSON / DB / API
+                                          │ Validate (Pydantic)│
+                                          │ Filter (apply)     │  ← тип звіту
+                                          │ Output (write)     │  ← JSON / CSV / stream
                                           └────────────────────┘
 ```
 
@@ -147,8 +147,6 @@ docker compose down
 
 | Статус | Опис |
 |--------|------|
-| `pending` | Очікує виконання |
-| `running` | Виконується |
 | `done` | Успішно завершено |
 | `failed` | Помилка (деталі у полі `error`) |
 
