@@ -7,9 +7,8 @@ REST API сервіс для паралельної генерації звіт�
 ## Зміст
 
 - [Архітектура](#архітектура)
-- [Структура проекту](#структура-проекту)
+- [Структура проєкту](#структура-проекту)
 - [Запуск через Docker](#запуск-через-docker)
-- [Запуск локально](#запуск-локально)
 - [API](#api)
 - [Додавання нових джерел, фільтрів та виводів](#розширення)
 
@@ -132,12 +131,12 @@ docker compose down
     {
       "source": {
         "type": "csv",
-        "path": "file:///code/input_data.csv"
+        "path": "/code/input_data.csv"
       },
       "filter": "high_salary_employees",
       "output": {
         "type": "json",
-        "path": "file:///code/output_example.json"
+        "path": "/code/output_example.json"
       }
     }
   ]
@@ -188,8 +187,14 @@ SOURCE_REGISTRY = {
 Кожен лог-запис містить `report_id`, що дозволяє відстежити lifecycle конкретного звіту:
 
 ```
-2026-04-07T10:00:00Z [info] report.start  report_id=7c9e... source=csv filter=high_salary_employees output=json
-2026-04-07T10:00:00Z [info] csv_source.fetch.done  report_id=7c9e... total_records=8
-2026-04-07T10:00:00Z [info] filter.high_salary.done  report_id=7c9e... output_count=5
-2026-04-07T10:00:00Z [info] report.done  report_id=7c9e...
+reports_backend  | 2026-04-09T15:24:23.756557Z [info     ] batch.start                    [app.services.report_servise] batch_id=91c82915-a874-4596-86b1-6300a1ce4468 report_count=1
+reports_backend  | 2026-04-09T15:24:23.756817Z [info     ] report.start                   [app.services.report_servise] report_id=fbb27b60-ed4c-4f1c-8168-8fb68906eed4
+reports_backend  | 2026-04-09T15:24:23.759113Z [warning  ] validation.row_invalid         [app.services.report_servise] error='Value error, Field must be non-negative' field=Salary row=0
+reports_backend  | 2026-04-09T15:24:23.768792Z [warning  ] validation.summary             [app.services.report_servise] dropped=[0] invalid_rows=1
+reports_backend  | 2026-04-09T15:24:23.769617Z [info     ] report.fetched                 [app.services.report_servise] record_count=100
+reports_backend  | 2026-04-09T15:24:23.770639Z [info     ] report.filtered                [app.services.report_servise] filtered_count=51
+reports_backend  | 2026-04-09T15:24:23.772201Z [info     ] json_output.written_to_file    [app.outputs.json_output] path=/code/high_salary_employees.json
+reports_backend  | 2026-04-09T15:24:23.772348Z [info     ] json_output.done               [app.outputs.json_output] total=51
+reports_backend  | 2026-04-09T15:24:23.772499Z [info     ] report.done                    [app.services.report_servise] report_id=fbb27b60-ed4c-4f1c-8168-8fb68906eed4
+reports_backend  | 2026-04-09T15:24:23.772847Z [info     ] batch.done                     [app.services.report_servise] batch_id=91c82915-a874-4596-86b1-6300a1ce4468 done=1 failed=0
 ```
