@@ -73,13 +73,13 @@ async def run_report(request: ReportRequest, report_id: str) -> ReportResult:
         raw_data = await source.read()
         validated_raw_data = _validate_dataframe(raw_data)
 
-        logger.info("report.fetched", record_count=len(validated_raw_data))
+        logger.info("report.fetched", report_id=report_id, record_count=len(validated_raw_data))
 
         # 3. Apply filters
         report_filter = FilterClass(salary_threshold=request.filter.salary_threshold)
         # filtered = report_filter.apply(validated_raw_data)   # 1.16s, blocks event loop - 90 reports
         filtered = await asyncio.to_thread(report_filter.apply, validated_raw_data)  # 1.03s, non-blocking - 90 reports
-        logger.info("report.filtered", filtered_count=len(filtered))
+        logger.info("report.filtered", report_id=report_id, filtered_count=len(filtered))
 
         # 4. Write outputs
         output = OutputClass(request.output)
@@ -118,7 +118,7 @@ async def run_batch(batch: BatchRequest) -> BatchResponse:
         run_report(request, report_id)
         for request, report_id in zip(batch.reports, report_ids)
     ]
-    results: list[ReportResult] = list(await asyncio.gather(*tasks, return_exceptions=True))
+    results: list[ReportResult] = list(await asyncio.gather(*tasks, return_exceptions=False))
 
     logger.info(
         "batch.done",
