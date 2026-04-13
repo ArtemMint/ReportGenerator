@@ -134,7 +134,10 @@ docker compose down
         "type": "csv",
         "path": "/code/input_data.csv"
       },
-      "filter": "high_salary_employees",
+    "filter": {
+        "type": "high_salary_employees",
+        "salary_threshold": 3500
+      },
       "output": {
         "type": "json",
         "path": "/code/output_example.json"
