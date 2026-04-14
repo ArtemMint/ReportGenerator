@@ -140,7 +140,7 @@ docker compose down
       },
       "output": {
         "type": "json",
-        "path": "/code/output_example.json"
+        "path": "/code/"
       }
     }
   ]
@@ -189,14 +189,12 @@ SOURCE_REGISTRY = {
 Кожен лог-запис містить `report_id`, що дозволяє відстежити lifecycle конкретного звіту:
 
 ```
-reports_backend  | 2026-04-09T15:24:23.756557Z [info     ] batch.start                    [app.services.report_servise] batch_id=91c82915-a874-4596-86b1-6300a1ce4468 report_count=1
-reports_backend  | 2026-04-09T15:24:23.756817Z [info     ] report.start                   [app.services.report_servise] report_id=fbb27b60-ed4c-4f1c-8168-8fb68906eed4
-reports_backend  | 2026-04-09T15:24:23.759113Z [warning  ] validation.row_invalid         [app.services.report_servise] error='Value error, Field must be non-negative' field=Salary row=0
-reports_backend  | 2026-04-09T15:24:23.768792Z [warning  ] validation.summary             [app.services.report_servise] dropped=[0] invalid_rows=1
-reports_backend  | 2026-04-09T15:24:23.769617Z [info     ] report.fetched                 [app.services.report_servise] record_count=100
-reports_backend  | 2026-04-09T15:24:23.770639Z [info     ] report.filtered                [app.services.report_servise] filtered_count=51
-reports_backend  | 2026-04-09T15:24:23.772201Z [info     ] json_output.written_to_file    [app.outputs.json_output] path=/code/high_salary_employees.json
-reports_backend  | 2026-04-09T15:24:23.772348Z [info     ] json_output.done               [app.outputs.json_output] total=51
-reports_backend  | 2026-04-09T15:24:23.772499Z [info     ] report.done                    [app.services.report_servise] report_id=fbb27b60-ed4c-4f1c-8168-8fb68906eed4
-reports_backend  | 2026-04-09T15:24:23.772847Z [info     ] batch.done                     [app.services.report_servise] batch_id=91c82915-a874-4596-86b1-6300a1ce4468 done=1 failed=0
+reports_backend  | 2026-04-14T07:13:11.559029Z [info     ] batch.start                    [app.services.report_servise] batch_id=a7d4f0bd-5fb6-4389-a79a-3ad707f313be report_count=1
+reports_backend  | 2026-04-14T07:13:11.559261Z [info     ] report.start                   [app.services.report_servise] report_id=182bafeb-7631-426c-9837-f794698070ef
+reports_backend  | 2026-04-14T07:13:11.561817Z [warning  ] validation.row_invalid         [app.services.report_servise] error='Value error, Field must be non-negative' field=Salary row=0
+reports_backend  | 2026-04-14T07:13:11.565801Z [warning  ] validation.summary             [app.services.report_servise] dropped=[0] invalid_rows=1
+reports_backend  | 2026-04-14T07:13:11.566377Z [info     ] report.fetched                 [app.services.report_servise] record_count=99 report_id=182bafeb-7631-426c-9837-f794698070ef
+reports_backend  | 2026-04-14T07:13:11.567504Z [info     ] report.filtered                [app.services.report_servise] filtered_count=51 report_id=182bafeb-7631-426c-9837-f794698070ef
+reports_backend  | 2026-04-14T07:13:11.569633Z [info     ] report.done                    [app.services.report_servise] report_id=182bafeb-7631-426c-9837-f794698070ef
+reports_backend  | 2026-04-14T07:13:11.569789Z [info     ] batch.done                     [app.services.report_servise] batch_id=a7d4f0bd-5fb6-4389-a79a-3ad707f313be done=1 failed=0
 ```

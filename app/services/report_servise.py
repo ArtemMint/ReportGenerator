@@ -82,12 +82,12 @@ async def run_report(request: ReportRequest, report_id: str) -> ReportResult:
         logger.info("report.filtered", report_id=report_id, filtered_count=len(filtered))
 
         # 4. Write outputs
-        output = OutputClass(request.output)
-        await output.write(filtered)
+        output = OutputClass(request.output, report_id)
+        report_path = await output.write(filtered)
 
         logger.info("report.done", report_id=report_id)
         return ReportResult(report_id=report_id, status=ReportStatus.done,
-                            data={"message": f"Report generated with {len(filtered)} records"})
+                            data={"message": f"Report generated with {len(filtered)} records at {report_path}"})
     except Exception as exc:
         logger.exception("report.failed", error=str(exc))
         return ReportResult(

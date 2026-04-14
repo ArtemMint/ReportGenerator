@@ -61,7 +61,7 @@ class OutputConfig(BaseModel):
     """Configuration for report outputs."""
     type: OutputType
     # For csv/json file outputs
-    path: str | None = "/code/high_salary_employees.json"
+    path: str | None = "/code"
 
 
 class ReportRequest(BaseModel):
